@@ -1,11 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    direction: ltr;
+    direction:rtl;
 }
 [class*="col-"]{
     box-sizing: border-box;
-    float:left;
+    float:right;
 }
 .row::after{
     content: "";
@@ -83,10 +83,15 @@
   z-index: 1000;
   width: 100%;
 }
-
+.eng{
+    direction: rtl;
+}
 nav {
   background-color: #222121;    margin: 0%;
-min-height: 35px; text-align: center; 
+min-height: 35px; text-align: center; direction: ltr;
+}
+.navbar-collapse{
+    direction: ltr;
 }
 .navbar .navbar-nav .nav-link { color: #fff; }
 .navbar .navbar-nav .nav-link:hover { color: #fbc531; }
@@ -109,7 +114,7 @@ li{
 html, body {
     margin: 0;
     padding: 0;
-    direction: ltr;
+    direction:rtl;
 
   }
 
@@ -477,4 +482,7 @@ border: 5px solid white;
     background-image: url(img/footer1.jpg);
     height: 500px;
     width: 100%;
+}
+.card-group{
+    direction: ltr;
 }
