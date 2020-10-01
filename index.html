@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -45,9 +45,7 @@
 
                         <input id="country_selector" type="text" class=" my-1 pad">
                         <input class="hide" id="country_selector" type="text" >
-                        
-                        <button  class="btn btn-light "  id="lang" onclick="changestyle()" style="margin: 3px;width: 50%;" >ARB </button>
-                     <button  class="btn btn-light "  id="lang2" onclick="changestyleENG()" style="margin: 3px;width: 50%;" >ENG </button>
+                        <button class="en btn btn-outline-primary"><a href="#" onclick="changecss('en')">EN</a> | <a href="#" onclick="changecss('ar')">AR</a> </button>
                     </div>
 
                     <button class="btn btn-primary  col-xs-3 mx-2 px-1 my-2" href="#signup" data-toggle="modal"
@@ -261,7 +259,17 @@
                     <li class="nav-item pl-1">
                         <a class="nav-link" href="#"><i class="fa fa-address-card-o fa-fw mr-1"></i>اتصل بنا</a>
                     </li>
-                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color3 text-white" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            اللغة
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                        <div><a class="dropdown-item"  href="#" onClick="styler('a')">اللغة العربية</a></div>
+                            <div> <a class="dropdown-item"  href="#" onClick="styler('r')">اللغة الانجليزية</a>
+                           </div>
+                            </div>
+                    </li>
 
                 </ul>
 
@@ -850,66 +858,67 @@
     <div class="col-md-12" style="margin-top: 20px;">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-    <button class="my-2 col-xs-3 btn btn-danger mx-2 text-center">
+    <button class="my-2 col-xs-3 btn btn-danger mx-3 text-center">
         اضف منتج مجاني</button></div>
         <div class="col-md-4"></div>
 
 </div>
 </div>
 </div>
-        <!--- Footer --->
-        <footer>
+     <!--- Footer --->
+     <footer>
 
-            <div class="jumbotron jumbotron-fluid p-5 mt-5 mb-0 bg-secondary footerop footer-style">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
-                            <div class="card bg-secondary footerop border-0">
-                                <div class="card-body text-light text-center">
-                                    <h5 class="card-title text-white display-4" style="font-size:30px">دليل التخفيظات</h5>
-                                    <p class="d-inline lead">الرئيسيه<br>
-                                        <a href="#" class="text-light d-block lead">العروض الجديده</a>
-                                    </p>
+        <div class="jumbotron jumbotron-fluid p-5 mt-5 mb-0 bg-secondary footerop footer-style">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary footerop border-0">
+                            <div class="card-body text-light text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">دليل التخفيظات</h5>
+                                <p class="d-inline lead">الرئيسيه<br>
+                                    <a href="#" class="text-light d-block lead">العروض الجديده</a>
+                                </p>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
-                            <div class="card bg-secondary footerop border-0">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-white display-4" style="font-size:30px">المساعده</h5>
-                                    <p class="d-inline lead">اتصل بنا <br>
-                                    <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i
-                                            class="fa fa-phone mr-2"></i>+90 (000) 000 0 000</a>
-                                    <a class="text-light d-block lead" href="#"><i
-                                            class="fa fa-envelope mr-2"></i>admin@localhost.com</a>
-                                </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary footerop border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">المساعده</h5>
+                                <p class="d-inline lead">اتصل بنا <br>
+                                <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i
+                                        class="fa fa-phone mr-2"></i>+90 (000) 000 0 000</a>
+                                <a class="text-light d-block lead" href="#"><i
+                                        class="fa fa-envelope mr-2"></i>admin@localhost.com</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                            <div class="card bg-secondary footerop border-0">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-white display-4" style="font-size:30px">تابعنا علئ</h5>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card bg-secondary footerop border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">تابعنا علئ</h5>
 
-                                    <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+                                <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
 
-                                    <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+                                <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
 
-                                    <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+                                <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
 
-                                    <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                                <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    </footer>
-    <!--# Footer #-->
+        </div>
+</div>
+</footer>
+<!--# Footer #-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -927,115 +936,22 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="build/js/countrySelect.js"></script>
     <script src="search/choices.js"></script>
+    <script src="js/js.js"></script>
 
-
-
-    
-    <!--change lang-->
-                  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-                  <script type="text/javascript">
-                       
-      
-      function changestyle(){//alert( document.getElementById("lang").innerHTML);
-                                document.getElementById("lang").style.display="none";
-                                document.getElementById("lang2").style.display="block";
-          var name='lang-style.css';
-          document.getElementById('sstyle').setAttribute('href',name);
-          
-                                } 
-  
-      function changestyleENG(){//alert( document.getElementById("lang").innerHTML);
-                                document.getElementById("lang2").style.display="none";
-                                document.getElementById("lang").style.display="block";
-          var name='style.css';
-          document.getElementById('sstyle').setAttribute('href',name);
-          
-                                } 
-                  </script>
 
 
 <script>
-    
-
-// Sticky navbar
-// =========================
-$(document).ready(function () {
-                // Custom function which toggles between sticky class (is-sticky)
-                var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-                    var stickyHeight = sticky.outerHeight();
-                    var stickyTop = stickyWrapper.offset().top;
-                    if (scrollElement.scrollTop() >= stickyTop) {
-                        stickyWrapper.height(stickyHeight);
-                        sticky.addClass("is-sticky");
-                    }
-                    else {
-                        sticky.removeClass("is-sticky");
-                        stickyWrapper.height('auto');
-                    }
-                };
-
-                // Find all data-toggle="sticky-onscroll" elements
-                $('[data-toggle="sticky-onscroll"]').each(function () {
-                    var sticky = $(this);
-                    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-                    sticky.before(stickyWrapper);
-                    sticky.addClass('sticky');
-
-                    // Scroll & resize events
-                    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-                        stickyToggle(sticky, stickyWrapper, $(this));
-                    });
-
-                    // On page load
-                    stickyToggle(sticky, stickyWrapper, $(window));
-                });
-            });
+    $(document).ready(function () {
+        function changecss(attr){
+    var css;
+    if(attr =="en")
+    css = "css/langstyle.css";
+    else
+    css = "css/style.css";
+    document.getElementById('style').href = css;
+} 
+    });
 </script>
-
-    <script>
-        $(document).on('ready', function () {
-
-
-            $(".center").slick({
-                dots: true,
-                infinite: true,
-                centerMode: true,
-                slidesToShow: 5,
-                slidesToScroll: 3
-            });
-
-
-
-            var stickyOffset = $('#nav_bar').offset().top;
-
-$(window).scroll(function () {
-//if you hard code, then use console
-//.log to determine when you want the 
-//nav bar to stick.  
-console.log($(window).scrollTop())
-if ($(window).scrollTop() > 280) {
-$('#nav_bar').addClass('navbar-fixed');
-}
-if ($(window).scrollTop() < 281) {
-$('#nav_bar').removeClass('navbar-fixed');
-}
-});
-
-            $(".center").slick({
-                dots: true,
-                infinite: true,
-                centerMode: true,
-                slidesToShow: 5,
-                slidesToScroll: 3
-            });
-
-
-        });
-        $("#country_selector").countrySelect({
-            preferredCountries: ['ca', 'gb', 'us']
-        });
-    </script>
-
 
 </body>
 
